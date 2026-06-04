@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import productAviator from "@/assets/product-aviator.jpg";
 import productRound from "@/assets/product-round.jpg";
 import productCateye from "@/assets/product-cateye.jpg";
@@ -32,6 +33,7 @@ const products = [
 ];
 
 const FeaturedCollection = () => {
+  const navigate = useNavigate();
   return (
     <section id="collections" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
@@ -54,6 +56,8 @@ const FeaturedCollection = () => {
           {products.map((product, index) => (
             <motion.div
               key={product.name}
+              onClick={() => navigate(`/product/${index + 1}`)}
+              style={{ cursor: "pointer" }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
