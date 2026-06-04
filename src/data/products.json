@@ -7,10 +7,10 @@
       "price": "₹4,999",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-aviator.jpg" },
-        { "label": "Side", "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=600&q=80" },
-        { "label": "Top", "image": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&q=80" },
+        { "label": "Side", "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80" },
+        { "label": "Top", "image": "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=600&q=80" },
         { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80" },
-        { "label": "Folded", "image": "https://images.unsplash.com/photo-1584036561632-f76e0fa6d7b6?w=600&q=80" }
+        { "label": "Folded", "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&q=80" }
       ]
     },
     {
@@ -20,10 +20,10 @@
       "price": "₹3,999",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-round.jpg" },
-        { "label": "Side", "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&q=80" },
-        { "label": "Top", "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=600&q=80" },
+        { "label": "Side", "image": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&q=80" },
+        { "label": "Top", "image": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&q=80" },
         { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=600&q=80" },
-        { "label": "Folded", "image": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&q=80" }
+        { "label": "Folded", "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=600&q=80" }
       ]
     },
     {
@@ -34,9 +34,9 @@
       "angles": [
         { "label": "Front", "image": "/src/assets/product-cateye.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=600&q=80" },
-        { "label": "Top", "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80" },
-        { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&q=80" },
-        { "label": "Folded", "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=600&q=80" }
+        { "label": "Top", "image": "https://images.unsplash.com/photo-1584036561632-f76e0fa6d7b6?w=600&q=80" },
+        { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80" },
+        { "label": "Folded", "image": "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=600&q=80" }
       ]
     },
     {
@@ -46,10 +46,10 @@
       "price": "₹3,499",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-wayfarer.jpg" },
-        { "label": "Side", "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80" },
-        { "label": "Top", "image": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&q=80" },
-        { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=600&q=80" },
-        { "label": "Folded", "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=600&q=80" }
+        { "label": "Side", "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80" },
+        { "label": "Top", "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&q=80" },
+        { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&q=80" },
+        { "label": "Folded", "image": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=600&q=80" }
       ]
     }
   ]
