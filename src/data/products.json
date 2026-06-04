@@ -6,7 +6,7 @@
       "type": "Aviator",
       "price": "₹4,999",
       "angles": [
-        { "label": "Front", "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80" },
+        { "label": "Front", "image": "/src/assets/product-aviator.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&q=80" },
         { "label": "Top", "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80" },
         { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=600&q=80" },
@@ -19,7 +19,7 @@
       "type": "Round Frame",
       "price": "₹3,999",
       "angles": [
-        { "label": "Front", "image": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&q=80" },
+        { "label": "Front", "image": "/src/assets/product-round.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1577744486770-020ab432da65?w=600&q=80" },
         { "label": "Top", "image": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=600&q=80" },
         { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1581803118522-7b72a50f7e9f?w=600&q=80" },
@@ -32,7 +32,7 @@
       "type": "Cat-Eye",
       "price": "₹5,499",
       "angles": [
-        { "label": "Front", "image": "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=600&q=80" },
+        { "label": "Front", "image": "/src/assets/product-cateye.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1588776814546-ec7e1c4a9f4b?w=600&q=80" },
         { "label": "Top", "image": "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=600&q=80" },
         { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1553735945-57b2b34f5871?w=600&q=80" },
@@ -45,7 +45,7 @@
       "type": "Wayfarer",
       "price": "₹3,499",
       "angles": [
-        { "label": "Front", "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&q=80" },
+        { "label": "Front", "image": "/src/assets/product-wayfarer.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80" },
         { "label": "Top", "image": "https://images.unsplash.com/photo-1455642305367-68834a1da7ab?w=600&q=80" },
         { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=600&q=80" },
