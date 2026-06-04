@@ -33,10 +33,10 @@
       "price": "₹5,499",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-cateye.jpg" },
-        { "label": "Side", "image": "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=600&q=80" },
-        { "label": "Top", "image": "https://images.unsplash.com/photo-1584036561632-f76e0fa6d7b6?w=600&q=80" },
-        { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80" },
-        { "label": "Folded", "image": "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=600&q=80" }
+        { "label": "Side", "image": "https://images.unsplash.com/photo-1473496169904-658ba7574b0d?w=600&q=80" },
+        { "label": "Top", "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600&q=80" },
+        { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1577803118522-7b72a50f7e9f?w=600&q=80" },
+        { "label": "Folded", "image": "https://images.unsplash.com/photo-1614715838608-dd527c46231d?w=600&q=80" }
       ]
     },
     {
@@ -46,10 +46,10 @@
       "price": "₹3,499",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-wayfarer.jpg" },
-        { "label": "Side", "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80" },
-        { "label": "Top", "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&q=80" },
-        { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&q=80" },
-        { "label": "Folded", "image": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=600&q=80" }
+        { "label": "Side", "image": "https://images.unsplash.com/photo-1588776814546-ec7e1c4a9f4b?w=600&q=80" },
+        { "label": "Top", "image": "https://images.unsplash.com/photo-1585076800441-39b3c3c3e32f?w=600&q=80" },
+        { "label": "3/4 View", "image": "https://images.unsplash.com/photo-1622445275576-721325977df9?w=600&q=80" },
+        { "label": "Folded", "image": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=600&q=80" }
       ]
     }
   ]
