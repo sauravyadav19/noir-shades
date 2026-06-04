@@ -1,0 +1,56 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "The Monarch",
+      "type": "Aviator",
+      "price": "₹4,999",
+      "angles": [
+        { "label": "Front", "image": "/src/assets/product-aviator.jpg" },
+        { "label": "Side", "image": "/src/assets/product-aviator.jpg" },
+        { "label": "Top", "image": "/src/assets/product-aviator.jpg" },
+        { "label": "3/4 View", "image": "/src/assets/product-aviator.jpg" },
+        { "label": "On Face", "image": "/src/assets/product-aviator.jpg" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "The Visionary",
+      "type": "Round Frame",
+      "price": "₹3,999",
+      "angles": [
+        { "label": "Front", "image": "/src/assets/product-round.jpg" },
+        { "label": "Side", "image": "/src/assets/product-round.jpg" },
+        { "label": "Top", "image": "/src/assets/product-round.jpg" },
+        { "label": "3/4 View", "image": "/src/assets/product-round.jpg" },
+        { "label": "On Face", "image": "/src/assets/product-round.jpg" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "The Enigma",
+      "type": "Cat-Eye",
+      "price": "₹5,499",
+      "angles": [
+        { "label": "Front", "image": "/src/assets/product-cateye.jpg" },
+        { "label": "Side", "image": "/src/assets/product-cateye.jpg" },
+        { "label": "Top", "image": "/src/assets/product-cateye.jpg" },
+        { "label": "3/4 View", "image": "/src/assets/product-cateye.jpg" },
+        { "label": "On Face", "image": "/src/assets/product-cateye.jpg" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "The Classic",
+      "type": "Wayfarer",
+      "price": "₹3,499",
+      "angles": [
+        { "label": "Front", "image": "/src/assets/product-wayfarer.jpg" },
+        { "label": "Side", "image": "/src/assets/product-wayfarer.jpg" },
+        { "label": "Top", "image": "/src/assets/product-wayfarer.jpg" },
+        { "label": "3/4 View", "image": "/src/assets/product-wayfarer.jpg" },
+        { "label": "On Face", "image": "/src/assets/product-wayfarer.jpg" }
+      ]
+    }
+  ]
+}
