@@ -61,12 +61,23 @@ const ProductDetail = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className="flex-1 border border-border overflow-hidden"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = Math.abs(offset.x) * velocity.x;
+                if (swipe < -1000 && selectedAngle < product.angles.length - 1) {
+                  setSelectedAngle(selectedAngle + 1);
+                } else if (swipe > 1000 && selectedAngle > 0) {
+                  setSelectedAngle(selectedAngle - 1);
+                }
+              }}
+              className="flex-1 border border-border overflow-hidden cursor-grab active:cursor-grabbing"
             >
               <img
                 src={product.angles[selectedAngle].image}
                 alt={product.angles[selectedAngle].label}
-                className="w-full h-full object-cover aspect-square"
+                className="w-full h-full object-cover aspect-square pointer-events-none"
               />
             </motion.div>
           </div>
