@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import productsData from "@/data/products.json";
 
 const ProductDetail = () => {
@@ -9,12 +9,33 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const product = productsData.products.find((p) => p.id === Number(id));
   const [selectedAngle, setSelectedAngle] = useState(0);
+  const [direction, setDirection] = useState(0);
 
   if (!product) return (
     <div className="min-h-screen bg-background flex items-center justify-center">
       <p className="text-foreground font-body">Product not found.</p>
     </div>
   );
+
+  const goNext = () => {
+    if (selectedAngle < product.angles.length - 1) {
+      setDirection(1);
+      setSelectedAngle(selectedAngle + 1);
+    }
+  };
+
+  const goPrev = () => {
+    if (selectedAngle > 0) {
+      setDirection(-1);
+      setSelectedAngle(selectedAngle - 1);
+    }
+  };
+
+  const variants = {
+    enter: (dir: number) => ({ x: dir > 0 ? 200 : -200, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (dir: number) => ({ x: dir > 0 ? -200 : 200, opacity: 0 }),
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -39,47 +60,64 @@ const ProductDetail = () => {
               {product.angles.map((angle, index) => (
                 <button
                   key={angle.label}
-                  onClick={() => setSelectedAngle(index)}
+                  onClick={() => { setDirection(index > selectedAngle ? 1 : -1); setSelectedAngle(index); }}
                   className={`w-16 h-16 border overflow-hidden transition-all duration-300 ${
                     selectedAngle === index
                       ? "border-primary"
                       : "border-border opacity-50 hover:opacity-100"
                   }`}
                 >
-                  <img
-                    src={angle.image}
-                    alt={angle.label}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={angle.image} alt={angle.label} className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>
 
-            {/* Main Image */}
-            <motion.div
-              key={selectedAngle}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = Math.abs(offset.x) * velocity.x;
-                if (swipe < -1000 && selectedAngle < product.angles.length - 1) {
-                  setSelectedAngle(selectedAngle + 1);
-                } else if (swipe > 1000 && selectedAngle > 0) {
-                  setSelectedAngle(selectedAngle - 1);
-                }
-              }}
-              className="flex-1 border border-border overflow-hidden cursor-grab active:cursor-grabbing"
-            >
-              <img
-                src={product.angles[selectedAngle].image}
-                alt={product.angles[selectedAngle].label}
-                className="w-full h-full object-cover aspect-square pointer-events-none"
-              />
-            </motion.div>
+            {/* Main Image with Arrows */}
+            <div className="flex-1 relative border border-border overflow-hidden">
+              <AnimatePresence custom={direction} mode="wait">
+                <motion.img
+                  key={selectedAngle}
+                  src={product.angles[selectedAngle].image}
+                  alt={product.angles[selectedAngle].label}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.3 }}
+                  className="w-full h-full object-cover aspect-square"
+                />
+              </AnimatePresence>
+
+              {/* Arrow Buttons */}
+              <button
+                onClick={goPrev}
+                disabled={selectedAngle === 0}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 border border-border p-1 hover:border-primary hover:text-primary transition-all disabled:opacity-20"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={goNext}
+                disabled={selectedAngle === product.angles.length - 1}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 border border-border p-1 hover:border-primary hover:text-primary transition-all disabled:opacity-20"
+              >
+                <ChevronRight size={20} />
+              </button>
+
+              {/* Dot indicators */}
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                {product.angles.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => { setDirection(index > selectedAngle ? 1 : -1); setSelectedAngle(index); }}
+                    className={`w-1.5 h-1.5 rounded-full transition-all ${
+                      selectedAngle === index ? "bg-primary w-3" : "bg-border"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right: Product Info */}
@@ -104,7 +142,7 @@ const ProductDetail = () => {
               {product.angles.map((angle, index) => (
                 <button
                   key={angle.label}
-                  onClick={() => setSelectedAngle(index)}
+                  onClick={() => { setDirection(index > selectedAngle ? 1 : -1); setSelectedAngle(index); }}
                   className={`font-body text-xs tracking-widest uppercase px-4 py-2 border transition-all duration-300 ${
                     selectedAngle === index
                       ? "border-primary text-primary"
