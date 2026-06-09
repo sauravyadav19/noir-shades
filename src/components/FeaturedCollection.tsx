@@ -9,25 +9,25 @@ const products = [
   {
     name: "The Monarch",
     type: "Aviator",
-    price: "₹4,999",
+    price: "$59.99",
     image: productAviator,
   },
   {
     name: "The Visionary",
     type: "Round Frame",
-    price: "₹3,999",
+    price: "$47.99",
     image: productRound,
   },
   {
     name: "The Enigma",
     type: "Cat-Eye",
-    price: "₹5,499",
+    price: "$64.99",
     image: productCateye,
   },
   {
     name: "The Classic",
     type: "Wayfarer",
-    price: "₹3,499",
+    price: "$41.99",
     image: productWayfarer,
   },
 ];

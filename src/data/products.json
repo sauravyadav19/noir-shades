@@ -4,7 +4,7 @@
       "id": 1,
       "name": "The Monarch",
       "type": "Aviator",
-      "price": "₹4,999",
+      "price": "$59.99",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-aviator.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80" },
@@ -17,7 +17,7 @@
       "id": 2,
       "name": "The Visionary",
       "type": "Round Frame",
-      "price": "₹3,999",
+      "price": "$47.99",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-round.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1473496169904-658ba7574b0d?w=600&q=80" },
@@ -30,7 +30,7 @@
       "id": 3,
       "name": "The Enigma",
       "type": "Cat-Eye",
-      "price": "₹5,499",
+      "price": "$64.99",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-cateye.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1473496169904-658ba7574b0d?w=600&q=80" },
@@ -43,7 +43,7 @@
       "id": 4,
       "name": "The Classic",
       "type": "Wayfarer",
-      "price": "₹3,499",
+      "price": "$41.99",
       "angles": [
         { "label": "Front", "image": "/src/assets/product-wayfarer.jpg" },
         { "label": "Side", "image": "https://images.unsplash.com/photo-1588776814546-ec7e1c4a9f4b?w=600&q=80" },
