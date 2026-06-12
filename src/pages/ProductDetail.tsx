@@ -1,15 +1,64 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import productsData from "@/data/products.json";
+import type { Product } from "@/types/product";
+
+// Static imports for product front images (Vite bundles these correctly at build time)
+import monarchFront from "@/assets/products/monarch/front.jpg";
+import visionaryFront from "@/assets/products/visionary/front.jpg";
+import enigmaFront from "@/assets/products/enigma/front.jpg";
+import classicFront from "@/assets/products/classic/front.jpg";
+
+// Static imports for Armani (all angles are local files)
+import armaniFront from "@/assets/products/armani/front.jpg";
+import armaniSide from "@/assets/products/armani/side.jpg";
+import armaniAngle from "@/assets/products/armani/angle.jpg";
+import armaniDetail from "@/assets/products/armani/detail.jpg";
+
+/**
+ * Per-product, per-angle image map.
+ * Key: productId → angleIndex → bundled Vite import URL.
+ * Only angles with local assets need an entry here; all others
+ * fall back to the raw URL stored in products.json.
+ */
+const productAngleImages: Record<number, Record<number, string>> = {
+  // Products 1–4: only the Front image (index 0) is a local asset
+  1: { 0: monarchFront },
+  2: { 0: visionaryFront },
+  3: { 0: enigmaFront },
+  4: { 0: classicFront },
+  // Product 5 (Armani): all four angles are local assets
+  5: {
+    0: armaniFront,
+    1: armaniSide,
+    2: armaniAngle,
+    3: armaniDetail,
+  },
+};
+
+/**
+ * Resolves the correct image src for a given angle.
+ * Looks up productAngleImages first; falls back to the raw JSON URL
+ * for any angle that has no local Vite import registered.
+ */
+function resolveImageSrc(productId: number, angleIndex: number, imageUrl: string): string {
+  return productAngleImages[productId]?.[angleIndex] ?? imageUrl;
+}
 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const product = productsData.products.find((p) => p.id === Number(id));
+  const product: Product | undefined = productsData.products.find(
+    (p) => p.id === Number(id)
+  );
   const [selectedAngle, setSelectedAngle] = useState(0);
   const [direction, setDirection] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!product) return (
     <div className="min-h-screen bg-background flex items-center justify-center">
@@ -67,7 +116,11 @@ const ProductDetail = () => {
                       : "border-border opacity-50 hover:opacity-100"
                   }`}
                 >
-                  <img src={angle.image} alt={angle.label} className="w-full h-full object-cover" />
+                  <img
+                    src={resolveImageSrc(product.id, index, angle.image)}
+                    alt={angle.label}
+                    className="w-full h-full object-contain"
+                  />
                 </button>
               ))}
             </div>
@@ -77,7 +130,7 @@ const ProductDetail = () => {
               <AnimatePresence custom={direction} mode="wait">
                 <motion.img
                   key={selectedAngle}
-                  src={product.angles[selectedAngle].image}
+                  src={resolveImageSrc(product.id, selectedAngle, product.angles[selectedAngle].image)}
                   alt={product.angles[selectedAngle].label}
                   custom={direction}
                   variants={variants}
@@ -85,7 +138,7 @@ const ProductDetail = () => {
                   animate="center"
                   exit="exit"
                   transition={{ duration: 0.3 }}
-                  className="w-full h-full object-cover aspect-square"
+                  className="w-full h-full object-contain aspect-square"
                 />
               </AnimatePresence>
 
