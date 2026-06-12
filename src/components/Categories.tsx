@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import categoryClothing from "@/assets/category-clothing.jpg";
-import categoryShoes from "@/assets/category-shoes.jpg";
-import categoryPerfume from "@/assets/category-perfume.jpg";
-import heroGlasses from "@/assets/hero-glasses.jpg";
-import categoryWatches from "@/assets/products/watches/rado/front.jpg";
+
+const categoryClothing = "/category-clothing.jpg";
+const categoryShoes = "/category-shoes.jpg";
+const categoryPerfume = "/category-perfume.jpg";
+const heroGlasses = "/hero-glasses.jpg";
+const categoryWatches = "/products/watches/rado/front.jpg";
 
 interface CategoriesProps {
   selectedCategory: string;
